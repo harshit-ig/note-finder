@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AiOutlineUser } from "react-icons/ai";
-import './ProfilePage.css';
 
 export default function ProfilePage() {
   const [name, setName] = useState('John Doe');

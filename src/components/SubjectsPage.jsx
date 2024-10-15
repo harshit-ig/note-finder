@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './SubjectsPage.css';
 
 export default function SubjectsPage() {
   const subjects = [

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AiOutlineUpload } from "react-icons/ai";
-import './UploadNotesPage.css';
 
 export default function UploadNotesPage() {
   const [file, setFile] = useState(null);

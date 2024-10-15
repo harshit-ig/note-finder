@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import './HomePage.css';
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');

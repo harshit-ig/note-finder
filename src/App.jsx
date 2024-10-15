@@ -1,47 +1,32 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { AiOutlineUser } from "react-icons/ai";
-import HomePage from './components/HomePage';
 import UploadNotesPage from './components/UploadNotesPage';
 import MyNotesPage from './components/MyNotesPage';
 import SubjectsPage from './components/SubjectsPage';
 import ProfilePage from './components/ProfilePage';
-import './App.css';
+import Navbar from './components/Navbar';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <header>
-          <div className="container">
-            <Link to="/" className="logo">LOGO</Link>
-            <nav>
-              <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/upload">Upload Notes</Link></li>
-                <li><Link to="/my-notes">My Notes</Link></li>
-                <li><Link to="/subjects">Subjects</Link></li>
-              </ul>
-            </nav>
-            <Link to="/profile" className="profile-link">
-             <AiOutlineUser/>
-              <span>Profile</span>
-            </Link>
-          </div>
-        </header>
+      <div className="flex flex-col min-h-screen">
+        <Navbar/>
+      
 
-        <main>
+        <main className="flex-grow container mx-auto p-4">
           <Routes>
-            <Route exact path="/" component={<HomePage/>} />
-            <Route path="/upload" component={<UploadNotesPage/>} />
-            <Route path="/my-notes" component={<MyNotesPage/>} />
-            <Route path="/subjects" component={<SubjectsPage/>} />
-            <Route path="/profile" component={<ProfilePage/>} />
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/upload" element={<UploadNotesPage />} />
+            <Route path="/my-notes" element={<MyNotesPage />} />
+            <Route path="/subjects" element={<SubjectsPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         </main>
 
-        <footer>
-          <div className="container">
+        <footer className="bg-gray-800 text-white p-4">
+          <div className="container mx-auto text-center">
             <p>&copy; 2023 Notes Finder. All rights reserved.</p>
           </div>
         </footer>
