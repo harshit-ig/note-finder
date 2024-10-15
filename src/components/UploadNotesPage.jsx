@@ -62,7 +62,7 @@ export default function UploadNotesPage() {
           </label>
         </div>
         <button type="submit" className="submit-button">
-          Upload Notes
+          Upload Notes 
         </button>
       </form>
     </div>
